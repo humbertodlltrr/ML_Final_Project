@@ -7,9 +7,10 @@ Tests can be done in test.py and an example of the available functions are shown
 
 # 1.Firstly it is required to indicate which classes of the data set are to be used.
 
-#0:airplane, 1:automobile, 2:bird, 3:cat, 4:deer, 5:dog, 6:frog, 7:horse, 8:ship, 9:truck
+#0:airplane, 1:automobile, 2:bird, 3:cat, 4:deer, 5:dog, 6:frog, 7:horse, 8:ship, 9:truck <br>
 #Insert into the array the classes you want to include, below example for comparing airplanes and automobiles
 #All 10 classes can be used at once
+
 cls = np.array([0,1])
 
 # 2. Before starting there are some parameters that can be altered to obtain worse/better results
