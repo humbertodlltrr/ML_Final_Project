@@ -62,6 +62,6 @@ cnn.visualize_images(classes,Xts,Yts,y_pred.flatten(),True,5) <br>
 cnn.visualize_images(classes,Xts,Yts,y_pred.flatten(),False,5)
 
 # Other python files
-<b>cifar10.py<\b> deals with the data set, downloading/extracting/reading <br>
+<b>cifar10.py</b> deals with the data set, downloading/extracting/reading <br>
 imgs.py processes the images before utilizing them as inputs, convolution/pooling/relu <br>
 cnn.py holds most of the functions pertaining to machine learning
