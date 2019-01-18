@@ -1,7 +1,7 @@
 # ML Final Project
 The project is a simple implementation of a convolutional neural network. Images are transformed before being utilized as inputs for the ConvNet. The neural network consists of one hidden layer. 
 
-There are four python files. These files run on Python 3, 3.6.5, with Anaconda distribution. Program runs without issues in the Spyder IDE. Otherwise just be sure to be able to make the following imports: numpy, pickle, os, tarfile, urllib, maplotlib, scipy and skimage. Running tests should download if neccessary the cifar10 data set from the following url https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz. If problems arise simply having the cifar-10-python.tar.gz file in the same directory as the python files should work. 
+There are four python files. These files run on Python 3, 3.6.5, with Anaconda distribution. Program runs without issues with the Spyder IDE in the Anaconda Navigator. Otherwise I believe being able to make the following imports should suffice: numpy, pickle, os, tarfile, urllib, maplotlib, scipy and skimage. cifar10.py get_data() function should download if neccessary the cifar10 data set from the following url https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz. If problems arise simply having the cifar-10-python.tar.gz file in the same directory as the python files should work. This function is already included in the python file test.py where tests are intended to be performed.
 
 Tests can be done in test.py and an example of the available functions are shown and commented accordingly. Regardless ahead I put some notes on the most important bits in test.py.
 
