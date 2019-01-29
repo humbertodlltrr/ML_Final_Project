@@ -3,10 +3,10 @@ from scipy import signal
 from skimage import color, filters, measure, transform
 import cnn
 
-k1 = np.array([0.5,0,-0.5,0.5,0,-0.5,0.5,0,-0.5]).reshape(3,3)
-k2 = np.array([0.5,0.5,0.5,0,0,0,-0.5,0.5,0.5]).reshape(3,3)
-k3 = np.array([0.5,0.5,0,0.5,0,-0.5,0,-0.5,-0.5]).reshape(3,3)
-k4 = np.array([0,0.5,0.5,-0.5,0,0.5,-0.5,-0.5,0]).reshape(3,3)
+k1 = np.array([0.5,0,-0.5]).reshape(3,1)
+k2 = k1.T
+k3 = np.array([0,0.5,-0.5,0]).reshape(2,2)
+k4 = k3.T
 
 def add_gs(img): #add a grayscale representation as a channel, used for convolutions
     z = np.zeros(shape = (img.shape[0],img.shape[1],img.shape[2]+1))
@@ -62,10 +62,10 @@ def transform_img(img): #Obtain hopefully more meaningful data from the image an
     img_copy = add_convolve(img_copy,3,k4)
     img_copy = cnn.relu(img_copy)
     img_copy = pooling(img_copy,2,2)
-    img_copy = convolve(img_copy,4,k1)
-    img_copy = convolve(img_copy,5,k2)
-    img_copy = convolve(img_copy,6,k3)
-    img_copy = convolve(img_copy,7,k4)
+    img_copy = add_convolve(img_copy,4,k2)
+    img_copy = add_convolve(img_copy,5,k1)
+    img_copy = add_convolve(img_copy,6,k4)
+    img_copy = add_convolve(img_copy,7,k3)
     img_copy = cnn.relu(img_copy)
     img_copy = pooling(img_copy,2,2)
     
