@@ -2,7 +2,7 @@ import numpy as np
 import imgs
 import matplotlib.pyplot as plt
 
-no_variables_input = 8*8*8
+no_variables_input = 8*8*12
 
 def one_hot_encoding(cls,no_classes): #change labels from an integer to a vector respresentation
     cls_encoded = np.zeros((no_classes,cls.size))
@@ -23,7 +23,7 @@ def softmax(z): #In order to use cross entropy one softmax activation is used to
     return sm
 
 def cost_function(out, cls_encoded): #Cross entropy
-    return np.sum((-cls_encoded.T * np.log(out)) - ((1-cls_encoded.T) * (1-np.log(out))))
+    return -np.sum(L*np.log(S))
 
 #Simple bias to reduce overfitting
 def column_bias(z):
